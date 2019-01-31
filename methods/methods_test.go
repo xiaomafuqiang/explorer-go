@@ -8,4 +8,5 @@ func Test_Methods(t *testing.T) {
 	testValues()
 	testPointers()
 	testNilBindExpressionOrValue()
+
 }
