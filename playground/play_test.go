@@ -14,4 +14,12 @@ func TestPlay(tt *testing.T) {
 	sl2[2] = 9
 	fmt.Println(sl, sl2)
 
+	var i = 1
+	defer func() {
+		fmt.Println("result: ", func() int {
+			return i * 2
+		}())
+	}()
+	i++
+
 }
