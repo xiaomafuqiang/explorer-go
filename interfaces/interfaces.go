@@ -52,21 +52,21 @@ type suber interface {
 	print2()
 }
 
-type superSubers struct {
+type superSuber struct {
 	name string
 	age  int
 }
 
-func (s *superSubers) print2() {
+func (s *superSuber) print2() {
 	fmt.Println("print2 ")
 }
 
-func (s *superSubers) print() {
+func (s *superSuber) print() {
 	fmt.Println("print ")
 }
 
 func runSuper() {
-	var supers = superSubers{
+	var supers = superSuber{
 		"mark", 3434,
 	}
 	supers.print()
