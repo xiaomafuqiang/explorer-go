@@ -2,6 +2,7 @@ package interfaces
 
 import (
 	"fmt"
+	"reflect"
 )
 
 type humaner interface {
@@ -158,8 +159,13 @@ func multipleImplements() {
 	}
 
 	var abParent = abStructParent{
-		abA, // use interface but cannot get any field about abA.name
+		abA, // use interface
 		abB,
 	}
+
+	var aInterfaceInterfce interface{} = abParent.aInterface
+	a := aInterfaceInterfce.(aInterface)
+	fmt.Println(a, "(aInterfaceInterfce.(aInterface)", reflect.ValueOf(a))
+
 	fmt.Println(abParent)
 }
