@@ -1,6 +1,9 @@
 package interfaces
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestInterfaces(t *testing.T) {
 
@@ -9,4 +12,9 @@ func TestInterfaces(t *testing.T) {
 	runSuper()
 
 	main2()
+
+	fmt.Println(" runCopy ------------->> ")
+	runCopy()
+	fmt.Println(" multipleImplements ------------->> ")
+	multipleImplements()
 }
