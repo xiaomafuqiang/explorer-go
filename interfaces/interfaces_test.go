@@ -24,3 +24,8 @@ func TestInterfaceTable(tt *testing.T) {
 
 	nilInterfaceCondition()
 }
+
+func TestInterfaceTransfer(t *testing.T) {
+	//testTransfer()
+	testTransInterface()
+}
