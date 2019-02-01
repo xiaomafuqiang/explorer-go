@@ -20,6 +20,7 @@ func testTransfer() {
 	fmt.Println(u.name, u.id, u)
 
 	//  switch 做批量类型判断，不支持 fallthrough
+	var vv interface{}
 	switch v := o.(type) {
 	case nil:
 		fmt.Println("nil")
@@ -30,10 +31,13 @@ func testTransfer() {
 	case Man:
 		fmt.Println("man")
 	case *Man:
+		vv = v
 		fmt.Println("*man")
 	default:
 		fmt.Println("default not know type...")
 	}
+	fmt.Println(vv)
+
 }
 
 // 超集接口对象可转换为子集接口，反之出错
@@ -67,4 +71,11 @@ func testTransInterface() {
 	var o Singer = p
 	//var pp Artisters = o  // error transfer...
 	fmt.Println(o)
+
+	var aType interface{}
+	switch at := p.(type) {
+	default:
+		aType = at
+	}
+	fmt.Println(aType, aType.(*APerson), p.(*APerson))
 }

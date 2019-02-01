@@ -27,5 +27,6 @@ func TestInterfaceTable(tt *testing.T) {
 
 func TestInterfaceTransfer(t *testing.T) {
 	//testTransfer()
-	testTransInterface()
+	//testTransInterface()
+	testSkill()
 }
