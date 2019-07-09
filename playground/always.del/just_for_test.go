@@ -40,6 +40,9 @@ func main() {
 }
 
 func TestM(t *testing.T) {
-	main()
+	//main()
+
+	fmt.Println([]string{"111"})
+	fmt.Println(map[int][]string{1: {"111"}})
 
 }
